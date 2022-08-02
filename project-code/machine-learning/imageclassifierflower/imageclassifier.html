@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <!-- SITE TITLE -->
+    <title>Shantanu</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../../../images/coollogo_com-197051439.gif"
+    />
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../../../css/templatemo-style.css" />
+    <link rel="stylesheet" href="../../../css/owl.carousel.min.css" />
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
+    <link rel="stylesheet" href="../../../css/project.css" />
+    <style>
+      a:hover,
+      a:focus {
+        text-decoration: none;
+        outline: none;
+      }
+      .tab {
+        font-family: "Sora", sans-serif;
+      }
+      .tab .nav-tabs {
+        background-color: transparent;
+        border: none;
+      }
+      .tab .nav-tabs li a {
+        color: #333;
+        background: #f5f5f5;
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 11px 15px 10px;
+        margin: 0 10px 1px 0;
+        border: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        border-radius: 0;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease 0s;
+      }
+      .tab .nav-tabs li:last-child a {
+        margin-right: 0;
+      }
+      .tab .nav-tabs li a:hover,
+      .tab .nav-tabs li.active a {
+        color: #fff;
+        background: #f5f5f5;
+        border: none;
+      }
+      .tab .nav-tabs li a:before {
+        content: "";
+        background: #eb5424;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transform: scale(0.5);
+        position: absolute;
+        left: 50%;
+        top: 0;
+        z-index: -1;
+        transition: opacity 0.4s ease 0s, left 0.3s ease 0s,
+          transform 0.4s ease 0.2s;
+      }
+      .tab .nav-tabs li.active a:before,
+      .tab .nav-tabs li a:hover:before {
+        opacity: 1;
+        transform: scale(1);
+        left: 0;
+      }
+      .tab .tab-content {
+        color: #333;
+        background: linear-gradient(
+          to right bottom,
+          #f5f5f5 50%,
+          transparent 50%
+        );
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 25px;
+        padding: 20px;
+        border-top: 4px solid #eb5424;
+        border-left: 4px solid #eb5424;
+        position: relative;
+      }
+      .tab .tab-content h3 {
+        color: #eb5424;
+        font-size: 22px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0 0 7px 0;
+      }
+      @media only screen and (max-width: 479px) {
+        .tab .nav-tabs li {
+          width: 100%;
+        }
+        .tab .nav-tabs li a {
+          margin: 0 0 10px;
+        }
+        .tab .tab-content h3 {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target="#rock-navigation">
+    <!-- START NAVIGATION -->
+    <div
+      class="navbar navbar-default bs-dos-nav navbar-fixed-top"
+      role="navigation"
+    >
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#rock-navigation"
+          >
+            <span class="icon icon-bar line1"></span>
+            <span class="icon icon-bar line2"></span>
+            <span class="icon icon-bar line3"></span>
+          </button>
+          <a
+            href="../../../ml.html"
+            class="navbar-brand"
+            style="padding: 1px; margin-right: 20px"
+            ><i class="fa fa-arrow-left fa-2x" aria-hidden="true">
+              <br />
+              <br /> </i
+          ></a>
+          <a href="../../../index.html" class="navbar-brand"
+            ><i class="fa fa-scribd logo" aria-hidden="true"></i>Shan.M</a
+          >
+        </div>
+        <nav class="collapse navbar-collapse" id="rock-navigation">
+          <ul
+            class="nav navbar-nav navbar-right main-navigation text-uppercase"
+          >
+            <li>
+              <a href="#application" class="smoothScroll">Image Classifier</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- END NAVIGATION -->
+    <section id="application" class="tm-padding-top-bottom-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="title" style="text-align: center">
+              <strong>Image</strong> Classification
+            </h2>
+            <div class="col-md-8">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="tab" role="tabpanel">
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                          <a
+                            href="#Section1"
+                            aria-controls="home"
+                            role="tab"
+                            data-toggle="tab"
+                            >About</a
+                          >
+                        </li>
+                        <li role="presentation">
+                          <a
+                            href="#Section2"
+                            aria-controls="profile"
+                            role="tab"
+                            data-toggle="tab"
+                            >Pridict.py</a
+                          >
+                        </li>
+                        <li role="presentation">
+                          <a
+                            href="#Section3"
+                            aria-controls="messages"
+                            role="tab"
+                            data-toggle="tab"
+                            >Output</a
+                          >
+                        </li>
+                      </ul>
+                      <!-- Tab panes -->
+                      <div class="tab-content tabs">
+                        <div
+                          role="tabpanel"
+                          class="tab-pane fade in active"
+                          id="Section1"
+                        >
+                          <h2><strong>Image Classification</strong></h2>
+                          <p>
+                            Image Classification Using Tensoflow and keras of
+                            flowers
+                          </p>
+                        </div>
+                        <div
+                          role="tabpanel"
+                          class="tab-pane fade"
+                          id="Section2"
+                        >
+                          <pre class="prettyprint">
+# -*- coding: utf-8 -*-
+"""predict
+
+Automatically generated by Colaboratory.
+
+Original file is located at
+    https://colab.research.google.com/drive/1Z3unq-b7dLa2CWyOa_rX3p2h33DhinBD
+"""
+
+'''code by: Shantanu Mishra '''
+# import all nessesory library
+import cv2
+import tensorflow as tf
+import tensorflow_hub as hub 
+import json
+import numpy as np
+from PIL import  Image
+import argparse
+
+#define some functions 
+
+def categories(jsonfile):#read all caregories of classes in json file and copy it in new dict new_categories
+    with open(jsonfile, 'r') as f:
+        old_categories =json.load(f)
+    new_categories = {}
+    for i in old_categories:
+        new_categories[str(int(i)-1)] = old_categories[i]
+    return new_categories
+
+#Preproccesing of image cz image has diff size and shape but in traing our model nd output we give a fixes size
+def prepare(image_file_path):
+    image_size = 224
+    img = Image.open(image_file_path)
+    image_file = np.asarray(img)
+    tf_tensor_image = tf.image.convert_image_dtype(image_file, dtype=tf.int16, saturate=False)
+    resize_imgage = tf.image.resize(tf_tensor_image,(image_size,image_size)).numpy()
+    img = resize_imgage/255
+    return img
+
+#main function Pridict_new_image which is load our model do prediction and return it for given image path
+def predict_new_images(image_path,my_model_path, topk,classes_file):
+    topk = int(topk)
+    tf.keras.backend.clear_session()
+    model = tf.keras.models.load_model(my_model_path, custom_objects={'KerasLayer':hub.KerasLayer})
+    print(model.summary())
+
+    new_categories = categories(classes_file)
+    new_array_categories = np.array(list(new_categories.items()))
+    
+    image = prepare(image_path)
+    prediction = model.predict(np.expand_dims(image,axis=0))
+    prediction = prediction[0].tolist()
+    prediction_classes = model.predict_classes(np.expand_dims(image,axis=0))
+    prediction_classes_prob = prediction[prediction_classes[0]]
+    prediction_cls = new_categories[str(prediction_classes[0])]
+    print("-"*60)
+    print("\nACcording to our Model Most likely class image and it's probability : ", "class name :",prediction_cls , "; class probability :",prediction_classes_prob)
+    print("-"*60)
+    val, indices= tf.math.topk(prediction, k=topk)
+    prediction_topk = val.numpy().tolist()
+    prediction_classes_topk = indices.numpy().tolist()
+    print("-"*60)
+    print("top ",topk,"Predictions :",prediction_topk)
+    print("top ",topk," Predictons classes :",prediction_classes_topk)
+    print("-"*60)
+    Prediction_class_label = [new_categories[str(i)] for i in prediction_classes_topk]
+    print('top k class labels:',Prediction_class_label)
+    print("-"*60)
+    prediction_class_topk_prob = dict(zip(Prediction_class_label, prediction_topk)
+    print("\nTop ",topk," classes along with associated probabilities according to our model :->>\n",class_prob_dict)
+
+
+ ''' # this is just for testing our function 
+my_model_path = "TrainedModel.h5"
+image_path = "orange_dahlia.jpg" 
+topk = 5
+classes_file = "label_map.json"
+predict_new_images(image_path,my_model_path,topk,classes_file)
+'''
+# call all the function nd use argparse library for make a command line applicaton of this model of image classification
+ 
+
+if __name__ == "__main__":
+    keyword = argparse.ArgumentParser(description="Process a Machine learning model")
+    keyword.add_argument("image_path",help="Path where You save Your Image ", default="")
+    keyword.add_argument("my_model_path",help="Path Where You save Your Model", default="")
+    keyword.add_argument("--topk", help="Fetch top k predictions (Chances to top k possible solution for image)", required = False, default = 5)
+    keyword.add_argument("--classes_file", help="Class map json file(Path where is Your Json file ", required = False, default = "label_map.json")
+    args = keyword.parse_args()
+    predict_new_images(arge.image_path,args.my_model_path,args.topk,args.classes_file)
+
+
+</pre
+                          >
+                        </div>
+                        <div
+                          role="tabpanel"
+                          class="tab-pane fade"
+                          id="Section3"
+                        >
+                          <h2>Output for <strong>Image Classifier</strong></h2>
+                          <div
+                            class="col-md-12"
+                            style="align-items: center; text-align: center"
+                          >
+                            <a
+                              href="./Project_Image_Classifier_Project(1).html"
+                              target="_blank"
+                              class="btn btn-default tm-view-more-btn button-home"
+                              >Click</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- START CONTACT -->
+    <section id="contact" class="tm-contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-1 col-sm-1"></div>
+          <div class="col-md-10 col-sm-10">
+            <div class="col-md-1 col-sm-1"></div>
+            <div class="col-md-12 col-sm-12">
+              <p>Made with 🖤 <strong>Shantanu Mishra</strong></p>
+            </div>
+
+            <div class="col-md-12 col-sm-12">
+              <a
+                class="footer"
+                href="https://www.linkedin.com/in/shantanu-mishra-8b6b66151/"
+                target="_blank"
+                ><i class="fa fa-linkedin fa-2x"></i
+              ></a>
+              <a
+                class="footer"
+                href="https://github.com/me-shantanu"
+                target="_blank"
+                ><i class="fa fa-github-alt fa-2x" style="color: black"></i
+              ></a>
+              <a
+                class="footer"
+                href="https://twitter.com/Shantan45277089"
+                target="_blank"
+                ><i
+                  class="fa fa-twitter fa-2x"
+                  style="color: cornflowerblue"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END CONTACT -->
+
+    <script src="../../../js/jquery.js"></script>
+    <script src="../../../js/owl.carousel.min.js"></script>
+    <script src="../../../js/jquery.easypiechart.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/smoothscroll.js"></script>
+    <script src="../../../js/jquery.nav.js"></script>
+    <script src="../../../js/isotope.js"></script>
+    <script src="../../../js/imagesloaded.min.js"></script>
+    <script src="../../../js/custom.js"></script>
+    <script src="../../../jquery.counterup.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script>
+      $("#Fout").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=python&amp;skin=sunburst"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.0.min.js"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+      integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
